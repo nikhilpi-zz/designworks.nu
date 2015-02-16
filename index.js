@@ -57,6 +57,8 @@ app.post('/mail', function(request, response) {
       to: request.body.Email,
       subject: 'Thank you for your ' + request.body.Service + ' request',
       text: 'Thank you for your service request from ' +  request.body.Email + '\n\nRequest info: ' + request.body.Message + '\n\nWe will get back to you as soon as possible!\n\nRegards,\nThe Designworks Team'
+    }, function(res){
+      res.redirect('/process');
     });
   });
 });
