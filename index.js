@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
+var config = require('./config')
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'designworks.nu@gmail.com',
-        pass: 'designworks2014'
+        user: config.gmail.user,
+        pass: config.gmail.pass
     }
 });
 
