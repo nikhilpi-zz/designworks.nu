@@ -86,10 +86,16 @@
 
 .team .image.featured {
 	height: 160px;
+	overflow: hidden;
 }
 
 .team .image.featured img{
-
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .img-secondary{
