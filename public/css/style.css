@@ -819,7 +819,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('../img/header.jpg');
+		background-image: url('../img/header1.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -890,13 +890,15 @@
 		
 		#header .button
 		{
+			background-color: rgba(0,0,0,0);
+			border: 2px solid #fff;
 			display: inline-block;
 			border-radius: 100%;
-			width: 4.5em;
-			height: 4.5em;
-			line-height: 4.5em;
+			width: 2.5em;
+			height: 2.5em;
+			line-height: 2.5em;
 			text-align: center;
-			font-size: 1.25em;
+			font-size: 2.25em;
 			padding: 0;
 		}
 		
@@ -1084,6 +1086,7 @@
 		text-align: center;
 		padding: 4.5em 0 4.5em 0;
 		margin-bottom: 0;
+
 	}
 	
 		#banner header > p
