@@ -47,6 +47,8 @@
 }
 .process .image.featured{
 	margin-bottom: 0;
+	width: 50%;
+	margin: auto;
 }
 
 .process.wrapper{
@@ -124,13 +126,13 @@
 	margin: auto;
 	display: none;
 	width: 100%;
-	padding: 10px;
+	padding: 5px;
 	background-color: rgba(0,0,0,.3);
 }
 
 .img-caption h3{
 	color: #ffffff;
-	font-size: 1em;
+	font-size: .75em;
 }
 
 #form p{
