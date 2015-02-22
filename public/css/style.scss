@@ -118,17 +118,20 @@
 	display: block;
 }
 
-.image.featured:hover .img-caption{
-	position: absolute;
-	display: block;
-}
+.image{
+	&.featured:hover {
+		.img-caption{
+			position: absolute;
+			display: block;
+		}
+		.img-secondary{
+			display: block;
+		}
+		.img-primary{
+			display: none;
+		}
+	}
 
-.image.featured:hover .img-secondary{
-	display: block;
-}
-
-.image.featured:hover .img-primary{
-	display: none;
 }
 
 .img-caption{
@@ -139,11 +142,10 @@
 	width: 100%;
 	padding: 5px;
 	background-color: rgba(0,0,0,.3);
-}
-
-.img-caption h3{
-	color: #ffffff;
-	font-size: .75em;
+	h3{
+		color: #ffffff;
+		font-size: .75em;
+	}
 }
 
 #form p{

@@ -79,10 +79,8 @@
 .image.featured:hover .img-caption {
   position: absolute;
   display: block; }
-
 .image.featured:hover .img-secondary {
   display: block; }
-
 .image.featured:hover .img-primary {
   display: none; }
 
@@ -94,10 +92,9 @@
   width: 100%;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.3); }
-
-.img-caption h3 {
-  color: #ffffff;
-  font-size: .75em; }
+  .img-caption h3 {
+    color: #ffffff;
+    font-size: .75em; }
 
 #form p {
   text-align: center; }
