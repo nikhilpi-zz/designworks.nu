@@ -701,6 +701,9 @@ header .icon.circled {
   -ms-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
   transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out; }
 
+#nav > ul > li:hover {
+  border-color: rgba(192, 192, 192, 0.35); }
+
 #nav > ul > li.active {
   border-color: rgba(192, 192, 192, 0.35); }
 
