@@ -36,14 +36,14 @@ router.post('/mail', function(request, response) {
   transporter.sendMail({
     from: 'designworks.nu@gmail.com',
     to: 'designworks.nu@gmail.com',
-    subject: 'Service request ' + request.body.Service,
-    text: 'Service request from ' +  request.body.Email + '\n' + request.body.Message
+    subject: 'Service request ' + request.body.Service + " from " + request.body.Name,
+    text: 'Service request from ' +  request.body.Name + '\n' + request.body.Email + '\n' + request.body.Message
   }, function(){
     transporter.sendMail({
       from: 'designworks.nu@gmail.com',
       to: request.body.Email,
       subject: 'Thank you for your ' + request.body.Service + ' request',
-      text: 'Thank you for your service request from ' +  request.body.Email + '\n\nRequest info: ' + request.body.Message + '\n\nWe will get back to you as soon as possible!\n\nRegards,\nThe Designworks Team'
+      text: 'Hello ' +  request.body.Name + '!\n\nWe have received your design request, and a member from the DesignWorks team will contact you within 24 Hours regarding the details of your request. If this request is urgent, please contact us at (847)-868-0418, or email us at\nhello@designworks.nu\n\nHave a nice day!\nThe DesignWorks Team'
     }, function(res){
       response.redirect('/process');
     });
