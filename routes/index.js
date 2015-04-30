@@ -31,6 +31,10 @@ router.get('/team', function(req, res) {
   res.render('team');
 });
 
+router.get('/apply', function(req, res) {
+  res.render('apply');
+});
+
 router.post('/mail', function(request, response) {
 
   transporter.sendMail({
