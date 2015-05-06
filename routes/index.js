@@ -1,4 +1,6 @@
 var express = require('express');
+var hummus = require('hummus');
+var fs = require('fs');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
@@ -53,5 +55,28 @@ router.post('/mail', function(request, response) {
     });
   });
 });
+
+
+router.get('/invoice', function(req, res) {
+  
+  var pdfWriter = hummus.createWriterToModify('./pdf/invoice_template.pdf',{modifiedFilePath:'./pdf/new_invoice_template.pdf'});
+  testPageSizeModification(pdfWriter)
+  // var pageModifier = new hummus.PDFPageModifier(pdfWriter,0);
+
+  // pageModifier.startContext().getContext().writeText('Test Text',
+  //                         0,
+  //                         0,
+  //                         {font:pdfWriter.getFontForFile('./TestMaterials/fonts/Couri.ttf'),size:14,colorspace:'gray',color:0xFF});
+  // pageModifier.endContext().writePage();
+
+  pdfWriter.end();
+
+  fs.readFile('./pdf/new_invoice_template.pdf', function (err,data){
+     res.contentType("application/pdf");
+     res.send(data);
+  });
+});
+
+
 
 module.exports = router;
