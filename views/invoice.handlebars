@@ -1,0 +1,112 @@
+<body class="no-sidebar portfolio">
+  <div class="wrapper style1">
+    <div class="container">
+      <form enctype='application/json' action="/invoice" method="post">
+        <div class="row text-center">
+          <div class="4u 12u(mobilep)">
+            <label>Org Name</label>
+            <input type="text" name="to[org]" placeholder="Org name" required>
+          </div>
+          <div class="4u 12u(mobilep)">
+            <label>Mailing Address</label>
+            <input type="text" name="to[address]" placeholder="Address" required>
+          </div>
+          <div class="4u 12u(mobilep)">
+            <label>Email</label>
+            <input type="email" name="to[email]" placeholder="Email" required>
+          </div>
+          <div class="4u 12u(mobilep)">
+            <label>Client Num</label>
+            <input type="number" name="to[clientNum]" placeholder="ClientNumber" required>
+          </div>
+          <div class="4u 12u(mobilep)">
+            <label>Date</label>
+            <input type="date" name="to[date]" placeholder="ClientNumber" required>
+          </div>
+          <div class="6u 12u(mobilep)">
+            <h2>Item 1</h2>
+            <div class="4u 12u(mobilep)">
+              <label>Service</label>
+              <input type="text" name="items[0][service]" placeholder="Service" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Price Per</label>
+              <input type="number" name="items[0][pricePer]" placeholder="123" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Amount</label>
+              <input type="number" name="items[0][amount]" placeholder="1" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Total</label>
+              <input type="number" name="items[0][total]" placeholder="1" >
+            </div>
+          </div>
+          <div class="6u 12u(mobilep)">
+            <h2>Item 2</h2>
+            <div class="4u 12u(mobilep)">
+              <label>Service</label>
+              <input type="text" name="items[1][service]" placeholder="Service" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Price Per</label>
+              <input type="number" name="items[1][pricePer]" placeholder="123" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Amount</label>
+              <input type="number" name="items[1][amount]" placeholder="1" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Total</label>
+              <input type="number" name="items[1][total]" placeholder="1" >
+            </div>
+          </div>
+          <div class="6u 12u(mobilep)">
+            <h2>Item 3</h2>
+            <div class="4u 12u(mobilep)">
+              <label>Service</label>
+              <input type="text" name="items[2][service]" placeholder="Service" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Price Per</label>
+              <input type="number" name="items[2][pricePer]" placeholder="123" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Amount</label>
+              <input type="number" name="items[2][amount]" placeholder="1" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Total</label>
+              <input type="number" name="items[2][total]" placeholder="1" >
+            </div>
+          </div>
+          <div class="6u 12u(mobilep)">
+            <h2>Item 4</h2>
+            <div class="4u 12u(mobilep)">
+              <label>Service</label>
+              <input type="text" name="items[3][service]" placeholder="Service" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Price Per</label>
+              <input type="number" name="items[3][pricePer]" placeholder="123" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Amount</label>
+              <input type="number" name="items[3][amount]" placeholder="1" >
+            </div>
+            <div class="4u 12u(mobilep)">
+              <label>Total</label>
+              <input type="number" name="items[3][total]" placeholder="1" >
+            </div>
+          </div>
+          <div class="4u 12u(mobilep)">
+            <label>Total</label>
+            <input type="number" name="total" placeholder="123" required>
+          </div>
+          <div class="12u 12u(mobilep)">
+            <button type="submit">Submit</button>
+          </div>
+      </form>
+    </div>
+  </div>  
+</body>
