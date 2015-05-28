@@ -1,5 +1,6 @@
 var express = require('express');
 var hummus = require('hummus');
+var fs = require("fs");
 var _ = require('underscore');
 var moment = require('moment');
 var request = require('request');
@@ -21,7 +22,15 @@ router.get('/', function(req, res) {
 });
 
 router.get('/portfolio', function(req, res) {
-  res.render('portfolio');
+  console.log('Current directory: ' + process.cwd());
+  var files = fs.readdirSync('public/img/portfolio');
+  var data = {images: []};
+  _.each(files, function(file){
+    if(file != '.DS_Store'){
+      data.images.push({filename: file});
+    }
+  });
+  res.render('portfolio', data);
 });
 
 router.get('/process', function(req, res) {
