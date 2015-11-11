@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'designworks.nu@gmail.com',
-    pass: 'designworks2014'
+    pass: 'promotionalstudentdesign'
   }
 });
 
