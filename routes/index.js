@@ -78,6 +78,8 @@ router.post('/mail', function(req, res) {
         ],
         // optional callback 
         function(err, results){
+            console.log(err);
+            console.log(results);
             res.redirect('/process');
         });
       }
